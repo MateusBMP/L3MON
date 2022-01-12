@@ -15,7 +15,8 @@ const
     db = require('./includes/databaseGateway'),
     logManager = require('./includes/logManager'),
     clientManager = new (require('./includes/clientManager'))(db),
-    apkBuilder = require('./includes/apkBuilder');
+    apkBuilder = require('./includes/apkBuilder'),
+    path = require('path');
 
 global.CONST = CONST;
 global.db = db;
@@ -69,6 +70,6 @@ client_io.on('connection', (socket) => {
 app.listen(CONST.web_port);
 
 app.set('view engine', 'ejs');
-app.set('views', './assets/views');
+app.set('views', path.join(__dirname, 'assets/views'));
 app.use(express.static(__dirname + '/assets/webpublic'));
-app.use(require('./includes/expressRoutes'));
+app.use(require(path.join(__dirname, 'includes/expressRoutes')));
