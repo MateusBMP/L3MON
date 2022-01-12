@@ -2,6 +2,7 @@ const path = require('path');
 
 exports.debug = (process.env.DEBUG === 'true');
 
+exports.web_host = process.env.WEB_HOST;
 exports.web_port = process.env.WEB_PORT;
 exports.control_port = process.env.CONTROL_PORT;
 
