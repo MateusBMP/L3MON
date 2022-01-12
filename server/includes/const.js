@@ -1,9 +1,9 @@
 const path = require('path');
 
-exports.debug = false;
+exports.debug = (process.env.DEBUG === 'true');
 
-exports.web_port = 22533;
-exports.control_port = 22222;
+exports.web_port = process.env.WEB_PORT;
+exports.control_port = process.env.CONTROL_PORT;
 
 // Paths
 exports.apkBuildPath = path.join(__dirname, '../assets/webpublic/build.apk')

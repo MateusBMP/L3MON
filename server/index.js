@@ -4,6 +4,7 @@
 *   By VoidTyphoon.co.uk
 */
 
+require('dotenv').config()
 
 const
     express = require('express'),

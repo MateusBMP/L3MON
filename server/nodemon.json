@@ -1,0 +1,17 @@
+{
+    "verbose": true,
+    "ignore": [
+        "./maindb.json",
+        "./.env",
+        "./node_modules/*",
+        "./clientData/*"
+    ],
+    "events": {
+        "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+    },
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js,mjs,ejs,json",
+    "delay": 2500
+}
