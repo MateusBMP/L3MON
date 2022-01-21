@@ -16,7 +16,7 @@ db.defaults({
 
 class clientdb {
     constructor(clientID) {
-        let cdb = lowdb(new FileSync(path.join(__dirname, './clientData/' + clientID + '.json')))
+        let cdb = lowdb(new FileSync(path.join(__dirname, '../clientData/' + clientID + '.json')))
         cdb.defaults({
             clientID,
             CommandQue: [],
